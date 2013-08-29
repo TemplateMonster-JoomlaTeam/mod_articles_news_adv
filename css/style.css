@@ -1,0 +1,61 @@
+/*
+ * Articles Newsflash Advanced
+ *
+ * @author    TemplateMonster http://www.templatemonster.com
+ * @copyright Copyright (C) 2012 - 2013 Jetimpex, Inc.
+ * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 
+ * Parts of this software are based on Articles Newsflash standard module
+ * 
+*/
+
+.mod-newsflash-adv .pretext{
+  padding-bottom: 1em;
+}
+
+.row-fluid [class*="itemSpan"] {
+  -moz-box-sizing: border-box;
+  display: block;
+  float: left;
+  margin-left: 1.76678445229682%;
+  min-height: 30px;
+  width: 100%;
+}
+.row-fluid [class*="itemSpan"]:first-child {
+  margin-left: 0;
+}
+.row-fluid .itemSpan1 {
+  width: 100%;
+}
+.row-fluid .itemSpan2 {
+  width: 49.11660777385159%;
+}
+.row-fluid .itemSpan3 {
+  width: 32.15547703180212%;
+}
+.row-fluid .itemSpan4 {
+  width: 23.674911660777386%;
+}
+.row-fluid .itemSpan5 {
+  width: 18.586572438162545%;
+}
+.row-fluid .itemSpan6 {
+  width: 15.19434628975265%;
+}
+.row-fluid .itemSpan7 {
+  width: 12.77132761231701%;
+}
+.row-fluid .itemSpan8 {
+  width: 10.954063604240282%;
+}
+.row-fluid .itemSpan9 {
+  width: 9.540636042402827%;
+}
+.row-fluid .itemSpan10 {
+  width: 8.409893992932862%;
+}
+.row-fluid .itemSpan11 {
+  width: 7.4847414070028915%;
+}
+.row-fluid .itemSpan12 {
+  width: 6.713780918727916%;
+}
