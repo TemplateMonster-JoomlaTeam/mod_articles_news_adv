@@ -19,7 +19,7 @@ $menu = JMenu::getInstance('site');
 $app    = JFactory::getApplication(); 
 $document =& JFactory::getDocument();
 
-$list = modArticlesNewsHelper::getList($params);
+$list = modArticlesNewsAdvHelper::getList($params);
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 $columns = (int)$params->get('columns');
 $bootstrap_layout = $params->get('bootstrap_layout');

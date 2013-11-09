@@ -43,6 +43,21 @@
 					<option value="">JOPTION_ALL_CATEGORIES</option>
 				</field>
 
+				<field name="show_child_category_articles" type="list"
+					default="0"
+					label="MOD_ARTICLES_NEWS_ADV_FIELD_SHOWCHILDCATEGORYARTICLES_LABEL"
+					description="MOD_ARTICLES_NEWS_ADV_FIELD_SHOWCHILDCATEGORYARTICLES_DESC"
+				>
+					<option value="1">MOD_ARTICLES_NEWS_ADV_OPTION_INCLUDE_VALUE
+					</option>
+					<option value="0">MOD_ARTICLES_NEWS_ADV_OPTION_EXCLUDE_VALUE
+					</option>
+				</field>
+
+				<field name="levels" type="text" default="1"
+					label="MOD_ARTICLES_NEWS_ADV_FIELD_CATDEPTH_LABEL"
+					description="MOD_ARTICLES_NEWS_ADV_FIELD_CATDEPTH_DESC" />
+
 				<!-- <field
 					name="showLastSeparator"
 					type="radio"
@@ -97,6 +112,18 @@
 						value="a.ordering">MOD_ARTICLES_NEWS_FIELD_ORDERING_ORDERING</option>
 					<option
 						value="rand()">MOD_ARTICLES_NEWS_FIELD_ORDERING_RANDOM</option>
+				</field>
+
+				<field
+					name="article_ordering_direction"
+					type="list"
+					default="DESC"
+					label="MOD_ARTICLES_NEWS_ADV_FIELD_ARTICLEORDERINGDIR_LABEL"
+					description="MOD_ARTICLES_NEWS_ADV_FIELD_ARTICLEORDERINGDIR_DESC">
+					<option
+						value="DESC">MOD_ARTICLES_NEWS_ADV_OPTION_DESCENDING_VALUE</option>
+					<option
+						value="ASC">MOD_ARTICLES_NEWS_ADV_OPTION_ASCENDING_VALUE</option>
 				</field>
 
 				<field
@@ -203,6 +230,21 @@
 					<option
 						value="h6">JH6</option>
 				</field>
+
+				<field name="show_introtext" type="radio" default="1"
+					class="btn-group btn-group-yesno"
+					label="MOD_ARTICLES_NEWS_ADV_FIELD_SHOWINTROTEXT_LABEL"
+					description="MOD_ARTICLES_NEWS_ADV_FIELD_SHOWINTROTEXT_DESC"
+				>
+					<option value="1">JSHOW
+					</option>
+					<option value="0">JHIDE
+					</option>
+				</field>
+
+				<field name="introtext_limit" type="text" default="100"
+					label="MOD_ARTICLES_NEWS_ADV_FIELD_INTROTEXTLIMIT_LABEL"
+					description="MOD_ARTICLES_NEWS_ADV_FIELD_INTROTEXTLIMIT_DESC" />
 				
 				<field name="show_tags" type="radio"
 					class="btn-group"
