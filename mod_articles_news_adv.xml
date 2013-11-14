@@ -242,7 +242,7 @@
 					</option>
 				</field>
 
-				<field name="introtext_limit" type="text" default="100"
+				<field name="introtext_limit" type="text" default="0"
 					label="MOD_ARTICLES_NEWS_ADV_FIELD_INTROTEXTLIMIT_LABEL"
 					description="MOD_ARTICLES_NEWS_ADV_FIELD_INTROTEXTLIMIT_DESC" />
 				
