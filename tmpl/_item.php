@@ -18,12 +18,17 @@ defined('_JEXEC') or die;
 	<?php  if (isset($item_images->image_intro) and !empty($item_images->image_intro)) : ?>
 	<?php $imgfloat = (empty($item_images->float_intro)) ? $params->get('float_intro') : $item_images->float_intro; ?>
 		<div class="item_img img-intro img-intro__<?php echo htmlspecialchars($params->get('intro_image_align')); ?>"> 
-			<a href="<?php echo $item->link;?>">
+		<?php if ((($params->get('item_title') && $params->get('link_titles')) || $params->get('readmore')) && $item->readmore) : ?>
+		<a href="<?php echo $item->link;?>">
+		<?php endif; ?>
 			<img
 			<?php if ($item_images->image_intro_caption):
 				echo 'class="caption"'.' title="' .htmlspecialchars($item_images->image_intro_caption) .'"';
 			endif; ?>
-			src="<?php echo htmlspecialchars($item_images->image_intro); ?>" alt="<?php echo htmlspecialchars($item_images->image_intro_alt); ?>"/></a> 
+			src="<?php echo htmlspecialchars($item_images->image_intro); ?>" alt="<?php echo htmlspecialchars($item_images->image_intro_alt); ?>"/>
+			<?php if ((($params->get('item_title') && $params->get('link_titles')) || $params->get('readmore')) && $item->readmore) : ?>
+		</a>
+		<?php endif; ?>
 		</div>
 	<?php endif; ?>
 <?php endif; ?>
