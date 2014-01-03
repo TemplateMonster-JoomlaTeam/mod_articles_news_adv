@@ -73,7 +73,9 @@ defined('_JEXEC') or die;
 	<?php echo $item->beforeDisplayContent; ?>
 
 	<!-- Introtext -->
+	<?php if ($params->get('show_introtext')) : ?>
 	<div class="item_introtext"><?php echo $item->introtext; ?></div>
+	<?php endif; ?>
 
 	<!-- Read More link -->
 	<?php if (isset($item->link) && $item->readmore != 0 && $params->get('readmore')) :
