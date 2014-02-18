@@ -11,9 +11,10 @@
 
 defined('_JEXEC') or die;
   $n = count($list);
+JHtml::addIncludePath(JPATH_BASE.'/components/com_content/helpers');
 ?>
 
-<div class="mod-newsflash-adv mod-newsflash-adv__<?php echo $moduleclass_sfx; ?>">
+<div class="mod-newsflash-adv mod-newsflash-adv__<?php echo $moduleclass_sfx; ?>" id="module_<?php echo $module->id; ?>">
 
   <?php if ($params->get('pretext')): ?>
     <div class="pretext">
@@ -29,7 +30,7 @@ defined('_JEXEC') or die;
             $class="lastItem";
           }
       ?>
-        <div class="item item_num<?php echo $i; ?> item__module  <?php echo $class; ?>" style="width:<?php echo 100/$columns; ?>%; float: left;">
+        <div class="item item_num<?php echo $i; ?> item__module  <?php echo $class; ?>" style="width:<?php echo 100/$columns; ?>%; float: left;" id="item_<?php echo $item->id; ?>">
           <?php require JModuleHelper::getLayoutPath('mod_articles_news_adv', '_item'); ?>
         </div>
       <?php endfor; ?>

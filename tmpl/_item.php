@@ -11,7 +11,19 @@
 defined('_JEXEC') or die;
 	$item_heading = $params->get('item_heading', 'h4');
 	$item_images = json_decode($item->images);
+	$canEdit = $item->params->get('access-edit');
 ?>
+
+<!-- Icons -->
+	<?php if ($canEdit) : ?>
+	<div class="item_icons btn-group pull-right"> <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-cog"></i> <span class="caret"></span> </a>
+		<ul class="dropdown-menu">
+			<?php if ($canEdit) : ?>
+				<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $item, $params); ?> </li>
+			<?php endif; ?>
+		</ul>
+	</div>
+	<?php endif; ?>
 
 <!-- Intro Image -->
 <?php if ($params->get('intro_image')): ?>
