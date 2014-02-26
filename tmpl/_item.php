@@ -11,10 +11,14 @@
 defined('_JEXEC') or die;
 	$item_heading = $params->get('item_heading', 'h4');
 	$item_images = json_decode($item->images);
+	if($layout!='edit'){
 	$canEdit = $item->params->get('access-edit');
+	JHtml::addIncludePath(JPATH_BASE.'/components/com_content/helpers');
+}
 ?>
 
 <!-- Icons -->
+<?php if($layout!='edit') : ?>
 	<?php if ($canEdit) : ?>
 	<div class="item_icons btn-group pull-right"> <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <i class="fa fa-cog"></i> <span class="caret"></span> </a>
 		<ul class="dropdown-menu">
@@ -23,6 +27,7 @@ defined('_JEXEC') or die;
 			<?php endif; ?>
 		</ul>
 	</div>
+	<?php endif; ?>
 	<?php endif; ?>
 
 <!-- Intro Image -->

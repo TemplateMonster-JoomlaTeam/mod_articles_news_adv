@@ -19,6 +19,7 @@ $menu = JMenu::getInstance('site');
 $app    = JFactory::getApplication(); 
 $doc = JFactory::getDocument();
 $document =& $doc;
+$layout   = $app->input->getCmd('layout', '');
 
 $list = modArticlesNewsAdvHelper::getList($params);
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
