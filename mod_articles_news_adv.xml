@@ -11,10 +11,11 @@
 	<license>Licensed under the GNU/GPLv2:  http://www.opensource.org/licenses/mit-license.php</license>
 	<authorEmail></authorEmail>
 	<authorUrl>www.templatemonster.com</authorUrl>
-	<version>1.5.0</version>
+	<version>1.5.1</version>
 	<description>MOD_ARTICLES_NEWS_ADV_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_articles_news_adv">mod_articles_news_adv.php</filename>
+		<folder>js</folder>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
@@ -90,12 +91,6 @@
 					<option	value="4">4</option>
 					<option	value="5">5</option>
 					<option	value="6">6</option>
-					<option	value="7">7</option>
-					<option	value="8">8</option>
-					<option	value="9">9</option>
-					<option	value="10">10</option>
-					<option	value="11">11</option>
-					<option	value="12">12</option>
 				</field>					
 
 				<field
@@ -193,14 +188,15 @@
 					label="MOD_ARTICLES_NEWS_FIELD_TITLE_LABEL"
 					description="MOD_ARTICLES_NEWS_FIELD_TITLE_DESC">
 					<option
-						value="1">JYES</option>
+						value="0">JHIDE</option>
 					<option
-						value="0">JNO</option>
+						value="1">JSHOW</option>
 				</field>
 
 				<field
 					name="link_titles"
-					type="list"
+					type="radio"
+					class="btn-group"
 					label="MOD_ARTICLES_NEWS_FIELD_LINKTITLE_LABEL"
 					description="MOD_ARTICLES_NEWS_FIELD_LINKTITLE_DESC">
 					<option
@@ -232,13 +228,13 @@
 				</field>
 
 				<field name="show_introtext" type="radio" default="1"
-					class="btn-group btn-group-yesno"
+					class="btn-group"
 					label="MOD_ARTICLES_NEWS_ADV_FIELD_SHOWINTROTEXT_LABEL"
 					description="MOD_ARTICLES_NEWS_ADV_FIELD_SHOWINTROTEXT_DESC"
 				>
-					<option value="1">JSHOW
-					</option>
 					<option value="0">JHIDE
+					</option>
+					<option value="1">JSHOW
 					</option>
 				</field>
 
@@ -265,9 +261,9 @@
 					label="MOD_ARTICLES_NEWS_ADV_FIELD_PUBLISHED_LABEL"
 					description="MOD_ARTICLES_NEWS_ADV_FIELD_PUBLISHED_DESC">
 					<option
-						value="1">JYES</option>
+						value="0">JHIDE</option>
 					<option
-						value="0">JNO</option>
+						value="1">JSHOW</option>
 				</field>
 
 				<field
@@ -278,9 +274,9 @@
 					label="MOD_ARTICLES_NEWS_ADV_FIELD_CREATEDBY_LABEL"
 					description="MOD_ARTICLES_NEWS_ADV_FIELD_CREATEDBY_DESC">
 					<option
-						value="1">JYES</option>
+						value="0">JHIDE</option>
 					<option
-						value="0">JNO</option>
+						value="1">JSHOW</option>
 				</field>
 
 
@@ -292,9 +288,9 @@
 					label="MOD_ARTICLES_NEWS_ADV_FIELD_INTRO_IMAGES_LABEL"
 					description="MOD_ARTICLES_NEWS_ADV_FIELD_INTRO_IMAGES_DESC">
 					<option
-						value="1">JYES</option>
+						value="0">JHIDE</option>
 					<option
-						value="0">JNO</option>
+						value="1">JSHOW</option>
 				</field>
 
 				<field
@@ -320,9 +316,9 @@
 					label="MOD_ARTICLES_NEWS_ADV_FIELD_IMAGES_LABEL"
 					description="MOD_ARTICLES_NEWS_FIELD_IMAGES_DESC">
 					<option
-						value="1">JYES</option>
+						value="0">JHIDE</option>
 					<option
-						value="0">JNO</option>
+						value="1">JSHOW</option>
 				</field>
 
 				<field
@@ -345,23 +341,23 @@
 				name="advanced">
 
 				<field
-					name="bootstrap_layout"
-					type="radio"
-					class="btn-group"
-					default="0"
-					label="MOD_ARTICLES_NEWS_ADV_FIELD_BOOTSTRAP_LAYOUT_LABEL"
-					description="MOD_ARTICLES_NEWS_ADV_FIELD_BOOTSTRAP_LAYOUT_DESC">
-					<option
-						value="0">fixed</option>
-					<option
-						value="1">fluid</option>
-				</field>
-
-				<field
 					name="layout"
 					type="modulelayout"
 					label="JFIELD_ALT_LAYOUT_LABEL"
 					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="masonry"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="MOD_ARTICLES_NEWS_ADV_MASONRY_LABEL"
+					description="MOD_ARTICLES_NEWS_ADV_MASONRY_DESC">
+					<option
+						value="0">JDISABLED</option>
+					<option
+						value="1">JENABLED</option>
+				</field>
 
 				<field
 					name="moduleclass_sfx"

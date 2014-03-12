@@ -24,18 +24,5 @@ $layout   = $app->input->getCmd('layout', '');
 $list = modArticlesNewsAdvHelper::getList($params);
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 $columns = (int)$params->get('columns');
-$bootstrap_layout = $params->get('bootstrap_layout');
-
-switch ($bootstrap_layout) {
-  case 0:
-    $row_class = 'row';
-    break;
-  case 1:
-    $row_class = 'row-fluid';
-    break;  
-  default:
-    $row_class = 'row';
-    break;
-}
 
 require JModuleHelper::getLayoutPath('mod_articles_news_adv', $params->get('layout', 'default'));
